@@ -1,0 +1,32 @@
+{
+  "name": "graphql-project-manager",
+  "version": "1.0.0",
+  "description": "A simple project management app built with GraphQL, Node and Express on the backend, MongoDB as DB and React and Apollo Client in the frontend.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalkoKa/graphql-project-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FalkoKa/graphql-project-manager/issues"
+  },
+  "homepage": "https://github.com/FalkoKa/graphql-project-manager#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
