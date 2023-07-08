@@ -1,7 +1,6 @@
-const { default: mongoose } = require('mongoose');
-const monggose = require('mongoose');
+const mongoose = require('mongoose');
 
-const ProjectSchema = new monggose.Schema({
+const ProjectSchema = new mongoose.Schema({
   name: {
     type: String,
   },
@@ -9,10 +8,11 @@ const ProjectSchema = new monggose.Schema({
     type: String,
   },
   status: {
-    enum: ['Not Started', 'In Progess', 'Completed'],
+    type: String,
+    enum: ['Not Started', 'In Progress', 'Completed'],
   },
   clientId: {
-    type: monggose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Client',
   },
 });
