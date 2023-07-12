@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export interface Project {
   id: string;
   name: string;
@@ -19,12 +21,12 @@ const ProjectCard = ({ project }: Props) => {
             {project.status}
           </p>
         </div>
-        <a
+        <Link
+          to={`/projects/${project.id}`}
           className="px-4 py-2 rounded-md bg-slate-100 hover:bg-slate-200"
-          href={`/projects/${project.id}`}
         >
           View
-        </a>
+        </Link>
       </div>
     </>
   );
