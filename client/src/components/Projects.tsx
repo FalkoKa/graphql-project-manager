@@ -13,7 +13,7 @@ const Projects = () => {
   return (
     <>
       {data.projects.length > 0 ? (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-2">
           {data.projects.map((project: Project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

@@ -19,21 +19,23 @@ const Clients = () => {
   return (
     <>
       {!loading && !error && (
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.clients.map((client: Client) => (
-              <ClientRow key={client.id} client={client} />
-            ))}
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="text-sm md:text-base w-full text-left">
+            <thead className="border-b-2 border-gray-200">
+              <tr>
+                <th className="px-6 py-3">Name</th>
+                <th className="px-6 py-3">Email</th>
+                <th className="px-6 py-3 min-w-[200px]">Phone</th>
+                <th className="px-6 py-3"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.clients.map((client: Client) => (
+                <ClientRow key={client.id} client={client} />
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </>
   );

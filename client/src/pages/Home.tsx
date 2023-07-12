@@ -8,7 +8,6 @@ const Home = () => {
       <AddClientModal />
       <Projects />
       <hr className="my-4" />
-
       <Clients />
     </div>
   );

@@ -19,13 +19,16 @@ const ClientRow = ({ client }: Props) => {
   });
 
   return (
-    <tr>
-      <td>{client.name}</td>
-      <td>{client.email}</td>
-      <td>{client.phone}</td>
-      <td>
-        <button onClick={() => deleteClient({ variables: { id: client.id } })}>
-          <FaTrash />
+    <tr className="border-b">
+      <td className="px-6 py-2">{client.name}</td>
+      <td className="px-6 py-2">{client.email}</td>
+      <td className="px-6 py-2">{client.phone}</td>
+      <td className="px-6 py-2">
+        <button
+          className="rounded-md bg-red-800 hover:bg-red-600 p-3"
+          onClick={() => deleteClient({ variables: { id: client.id } })}
+        >
+          <FaTrash color="white" />
         </button>
       </td>
     </tr>

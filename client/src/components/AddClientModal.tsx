@@ -62,7 +62,7 @@ const AddClientModal = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative my-4">
       <button
         className="bg-black text-white p-2 border rounded-md hover:bg-gray-700 flex items-center gap-2"
         onClick={handleOpen}
