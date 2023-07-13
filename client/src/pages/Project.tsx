@@ -4,6 +4,7 @@ import { GET_PROJECT } from '../queries/projectQueries';
 import Spinner from '../components/Spinner';
 import ClientInfo from '../components/ClientInfo';
 import DeleteProjectButton from '../components/DeleteProjectButton';
+import EditProjectForm from '../components/EditProjectForm';
 
 const Project = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const Project = () => {
 
   return (
     <>
-      <div className="mt-8">
+      <div className="my-8">
         {!loading && !error && (
           <div className="m-auto max-w-[650px] border rounded-lg p-12">
             <div className="flex justify-end">
@@ -35,6 +36,7 @@ const Project = () => {
               <p>{data.project.status}</p>
               <ClientInfo client={data.project.client} />
             </div>
+            <EditProjectForm project={data.project} />
             <div className="flex justify-end">
               <DeleteProjectButton projectId={data.project.id} />
             </div>
