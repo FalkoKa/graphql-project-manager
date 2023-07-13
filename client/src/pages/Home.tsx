@@ -6,7 +6,7 @@ import AddProjectModal from '../components/AddProjectModal';
 const Home = () => {
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 my-4">
         <AddClientModal />
         <AddProjectModal />
       </div>

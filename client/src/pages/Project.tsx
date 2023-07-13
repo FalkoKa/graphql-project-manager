@@ -14,7 +14,7 @@ const Project = () => {
 
   return (
     <>
-      <div>
+      <div className="mt-8">
         {!loading && !error && (
           <div className="m-auto max-w-[650px] border rounded-lg p-12">
             <div className="flex justify-end">

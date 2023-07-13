@@ -69,7 +69,7 @@ const AddProjectModal = () => {
   return (
     <>
       {!loading && !error && (
-        <div className="relative my-4">
+        <div className="relative">
           <button
             className="bg-blue-700 text-white p-2 border rounded-md hover:bg-blue-800 flex items-center gap-2"
             onClick={handleOpen}
