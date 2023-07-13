@@ -14,7 +14,7 @@ const EditProjectForm = ({ project }: any) => {
   const [formInput, setFormInput] = useState<FormData>({
     name: project.name,
     description: project.description,
-    status: '',
+    status: 'new',
   });
 
   const { name, description, status } = formInput;
