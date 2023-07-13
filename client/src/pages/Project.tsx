@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
-import Spinner from '../components/Spinner';
 import { useQuery } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
+import Spinner from '../components/Spinner';
+import ClientInfo from '../components/ClientInfo';
 
 const Project = () => {
   const { id } = useParams();
@@ -14,7 +15,13 @@ const Project = () => {
     <>
       <div>
         {!loading && !error && (
-          <div className="m-auto max-w-[650px] border rounded-lg py-16 px-12 flex justify-between items-center">
+          <div className="relative m-auto max-w-[650px] border rounded-lg p-12">
+            <Link
+              className="absolute right-12 top-10 px-8 sm:px-12 py-2 rounded-md max-w-full bg-slate-100 hover:bg-slate-200"
+              to="/"
+            >
+              Back
+            </Link>
             <div>
               <h1 className="my-2 text-2xl font-semibold">
                 {data.project.name}
@@ -22,13 +29,8 @@ const Project = () => {
               <p className="text-sm">{data.project.description}</p>
               <h5 className="text-lg font-semibold mt-5">Project Status</h5>
               <p>{data.project.status}</p>
+              <ClientInfo client={data.project.client} />
             </div>
-            <Link
-              className="px-8 sm:px-12 py-2 rounded-md max-w-full bg-slate-100 hover:bg-slate-200"
-              to="/"
-            >
-              Back
-            </Link>
           </div>
         )}
       </div>

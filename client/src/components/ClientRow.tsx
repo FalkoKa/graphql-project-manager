@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { DELETE_CLIENT } from '../mutations/clientMutations';
 import { GET_CLIENTS } from '../queries/clientQueries';
 
-type Props = {
+export type Props = {
   client: Client;
 };
 
