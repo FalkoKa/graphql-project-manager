@@ -19,7 +19,7 @@ const ClientRow = ({ client }: Props) => {
   });
 
   return (
-    <tr className="border-b">
+    <tr className="border-b hover:bg-slate-100">
       <td className="px-6 py-2">{client.name}</td>
       <td className="px-6 py-2">{client.email}</td>
       <td className="px-6 py-2">{client.phone}</td>
